@@ -32,12 +32,12 @@ class ListField extends BaseField {
     ));
 
     if(!is_array($value)) {
-      $input->val($value, false);
+      $input->val(html($value, false));
     }
 
     if($this->readonly()) {
       $input->attr('tabindex', '-1');
-      $input->addClass('input-is-readonly');
+      $input->attr('readonly', 'readonly');
     }
 
     return $input;
@@ -78,7 +78,7 @@ class ListField extends BaseField {
 
     $value = parent::value();
     return yaml::decode($value);
-    
+
   }
 
 }

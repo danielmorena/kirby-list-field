@@ -7,3 +7,18 @@
   pointer-events: auto;
   cursor: move;
 }
+
+.list-field input:read-only:focus {
+  border-color: #ddd;
+}
+
+.field-is-readonly .list-field .add-input {
+  display: none;
+}
+
+.field-is-readonly .list-field .field-icon {
+  background: none;
+}
+.field-is-readonly .list-field .field-icon:hover .icon {
+  color: #777;
+}
